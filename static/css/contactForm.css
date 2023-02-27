@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* html::-webkit-scrollbar {
+    width: 22px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #60b4df;
+    border-radius: 20vw;
+    
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #508592;
+    border-radius: 20vw;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #cbd4dabd;
+    border-radius: 20vw;
+    margin-block: 0.5em;
+}
+
+html::-webkit-scrollbar-track:hover {
+    background-color: #898b8d71;
+    border-radius: 20vw;
+    margin-block: 0.5em;
+} */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow: scroll;
+    height: 100vh;
+	width: 100%;
+    overflow-x: hidden;
+    animation: transitionIn 0.75s;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #ad38ec, #7303c0, #03001e);
+  }
+header * {
+    display: inline;
+  }
+header li {
+    margin: 20px;
+  }
+  .navbar-links {
+    float: left;
+    margin: 10px;
+    display: block;
+    position: sticky;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+  }
+header li a {
+    float: left;
+    margin: 0;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+  }
+
+/* *******************************************Header css ends ***********************************************/
+
+.banner_img{
+    width: 100%;
+    margin-top: 12vh;
+}
+
+
+.banner{
+    padding-top: 5vh;
+}
+.banner .serviceHeader{
+    background-image: url(img/contact_us.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+    width: 100%;
+    padding-top: 9vh;
+} 
+
+.banner .bannerContent {
+    /* background-color: rgba(6, 255, 213, 0.527); */
+    min-height: 40vh;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.serviceHeader .bannerContent h2{
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.serviceHeader .bannerContent p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 1rem;
+    
+}
+
+/* ********************************************Contact Form****************************************** */
+
+
+.contactForm .container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10vh 100px;
+}
+
+.contactForm .container:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	/* background: url("img/bg.jpg") no-repeat center; */
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contactForm .contact-box{
+	max-width: 400vh;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.contactForm .left{
+	/* background: url("img/bg.jpg") no-repeat center; */
+	background-size: cover;
+	height: 100%;
+    padding: 25px 40px;
+}
+
+.contactForm .right{
+	padding: 25px 40px;
+}
+
+.contactForm h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+.contactForm h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: orange;
+}
+
+.contactForm .field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.contactForm .field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.contactForm textarea{
+	min-height: 150px;
+}
+
+.contactForm .btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: orange;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.contactForm .btn:hover{
+    background-color: green;
+}
+
+#error_message{
+    margin-left: 20vh;
+    margin-right: 20vh;
+    margin-bottom: 3px;
+    background: #fe8b8e;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: all 0.5s ease;
+}
+
+.contactForm .field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.contactForm .contact-box{
+		grid-template-columns: 1fr;
+	}
+	.contactForm .left{
+		height: 200px;
+	}
+}
+
+/*********************************** Contact form css ends ******************************************************/
+
+.footer{
+    position: relative;
+    bottom: -5vh;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    /* font-family: "Open Sans"; */
+    padding-top: 40px;
+    color: #fff;
+}
+.footer .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer .footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer .footer-content p{
+    max-width: 100vh;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.footer .socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1rem 0;
+}
+.footer .socials li{
+    margin: 0 10px;
+}
+.footer .socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer .socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.footer .socials a:hover i{
+    color: aqua;
+}
+
+.footer .footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer .footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer .footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Travelling</title>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/travelling.css') }}">
+</head>
+<body>
+
+    <!-- logo, home, book now sign in, log in -->
+    <!-- <header>
+        <nav>
+          <ul>
+            <li class="navbar-links">
+              <a href="./"> Home </a>
+              <a href="/map-duration"> Planner </a>
+              <a href="#"> Things To Do </a>
+              <a href="#"> About </a>
+              <a href="./contactForm"> Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </header> -->
+
+<!-- ************************************* main ******************************************* -->
+
+<a href="/map-duration" class="button1"><span>Back</span></a>
+
+<div class="container">
+    <h1>Our</h1>
+        <div class="row" id ="default_img">
+            <!-- <div class ="#" id ="default_img"> -->
+            <div class="service">
+                <i class="fa-regular fa-hotel"></i>
+                <h2>Accomadation</h2>
+                <!-- <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                quae?
+                </p> -->
+            </div>
+            <div class="service" id="transportation">
+                <i class="fa-solid fa-plane"></i>
+                <h2>Transportation</h2>
+                <!-- <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                quae?
+                </p> -->
+            </div>
+            <div class="service" id ="things-to-do">
+                <i class="fa-solid fa-map-pin"></i>
+                <h2>Things to Do</h2>
+                <!-- <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                quae?
+                </p> -->
+            </div>
+        </div>
+
+        <div class="row" id = "transportation-1">
+            <!-- <div id = "transportation-1"> -->
+            <div href="" class="service">
+                <i class="fab fa-instagram"></i>
+                <i class="fas fa-laptop-code"></i>
+                <h2>Flight</h2>
+                <!-- <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                    quae?
+                </p> -->
+            </div>
+            <div href="" class="service">
+                <i class="fas fa-chart-line"></i>
+                <h2>Train</h2>
+                <!-- <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                    quae?
+                </p> -->
+            </div>
+            <div href="" class="service">
+                <i class="fab fa-sketch"></i>
+                <h2>Bus</h2>
+                <!-- <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                    quae?
+                </p> -->
+            </div>
+        </div>
+
+        <div class="row" id="things-to-do-1">
+            <!-- <div id="things-to-do-1"> -->
+            <div class="service">
+                <i class="fa-solid fa-map-pin"></i>
+                <h2>Data Analysis</h2>
+                <!-- <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                    quae?
+                </p> -->
+            </div>
+            <div class="service">
+                <i class="fas fa-mobile-alt"></i>
+                <h2>App Development</h2>
+                <!-- <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                    quae?
+                </p> -->
+            </div>
+            <div class="service">
+                <i class="fas fa-mobile-alt"></i>
+                <h2>App Development</h2>
+                <!-- <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+                    quae?
+                </p> -->
+            </div>
+        </div>
+
+    <!-- </div> -->
+
+<a href = "/wandering-solo" class="button"><span>Next</span></a>
+
+</div>
+
+    
+<footer class = footer>
+    <div class="footer-content">
+        <h3>Team Panchayat</h3>
+        <p> <b>Email : oppanchayat5@gmail.com </b> </p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://github.com/panchayat5"><i class="fa fa-github"></i></a></li>
+            <!-- <li><a href="#"><i class="fa fa-envelope"></i></a></li> -->
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>All right reserved by ©Panchayat_GGITS <span>designed with &#x2764</span></p>
+    </div>
+</footer>
+
+
+<script>
+
+$(document).ready(function() {
+	$('#default_img').show();
+	$('#transportation-1').hide();
+	$('#things-to-do-1').hide();
+	// $('#mum_q3').hide();
+	// $('#mum_q4').hide();
+	// $('#mum_q5').hide();
+	// $('#mum_q6').hide();
+});
+
+
+$('#transportation').on('click', function() {
+    $('#default_img').hide();
+    $('#things-to-do-1').hide();
+    $('#transportation-1').show(500);
+    $('#mum_q4').hide();
+    $('#mum_q5').hide();
+    $('#mum_q6').hide();
+});
+
+$('#things-to-do').on('click', function() {
+    $('#default_img').hide();
+    $('#things-to-do-1').show(500);
+    $('#transportation-1').hide();
+    $('#mum_q4').hide();
+    $('#mum_q5').hide();
+    $('#mum_q6').hide();
+});
+
+$('#query5').on('click', function() {
+    $('#default_img').hide();
+    $('#mum_q1').hide();
+    $('#mum_q2').hide();
+    $('#mum_q3').hide();
+    $('#mum_q4').hide();
+    $('#mum_q5').show(500);
+    $('#mum_q6').hide();
+
+});
+
+</script>
+  </body>
+  </html>

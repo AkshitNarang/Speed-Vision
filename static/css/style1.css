@@ -1,0 +1,135 @@
+/*styling.css*/
+/*add font family, background image*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #5bc0de;
+  font-family: "Poppins", sans-serif;
+}
+
+.fa-map-marker-alt,
+.fa-dot-circle {
+  color: #5bc0de;
+}
+
+/*Jumbotron*/
+.jumbotron {
+  background-color: transparent;
+  margin: 0;
+  padding: 10px;
+}
+
+.jumbotron h1 {
+  letter-spacing: 2.5px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.jumbotron h1,
+.jumbotron p {
+  text-align: center;
+}
+
+.jumbotron p {
+  font-size: 1em;
+}
+
+/*map*/
+#googleMap {
+  width: 80%;
+  height: 400px;
+  margin: 10px auto;
+}
+
+/*output box*/
+#output {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px auto;
+}
+
+#mode {
+  color: black;
+}
+
+
+.button1{
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #ad38ec, #7303c0, #03001e);
+  border: none;
+  color: white;
+  text-align: center;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 28px;
+  padding: 20px;
+  width: 135px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.button1 span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button1 span::after{
+  content: "\00AB";
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: -12vh;
+  transition: 0.5s;
+}
+.button1:hover span{
+  padding-left: 25px;
+}
+.button1:hover span::after{
+  opacity: 1;
+  right: 0px;
+}
+
+.button{
+  position: absolute;
+  top: 50%;
+  left: 96%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #ad38ec, #7303c0, #03001e);
+  border: none;
+  color: white;
+  text-align: center;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 28px;
+  padding: 20px;
+  width: 135px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.button span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span::after{
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span{
+  padding-right: 25px;
+}
+.button:hover span::after{
+  opacity: 1;
+  right: 0px;
+}
